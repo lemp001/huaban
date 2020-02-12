@@ -1,0 +1,92 @@
+.box {
+  position: relative;
+  overflow: hidden;
+}
+.button_bar {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  height: 100px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  color: #c5c5c5;
+  
+}
+.button_box {
+  padding: 4px 6px;
+  border-radius: 2px;
+  text-align: center;
+  width: 68px;
+  z-index: 999;
+}
+.button_box:hover {
+  box-shadow: 0px 0px 5px 4px #108ee9;
+}
+.button {
+  composes: button_box;
+  box-shadow: 0px 0px 3px 2px #fff;
+}
+
+.active {
+  composes: button_box;
+  box-shadow: 0px 0px 5px 4px #108ee9;
+}
+.icon {
+  font-size: 30px;
+  line-height: 30px;
+}
+.edit_box_common {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  transition: bottom .75s;
+  padding: 15px 0;
+  /* box-shadow: 0px 0px 4px 4px #a1a1a1 inset  */
+}
+.edit_box_visible {
+  composes: edit_box_common;
+  bottom: 100px;
+}
+.edit_box_hidden {
+  composes: edit_box_common;
+  bottom: calc(-100% - 100px);
+}
+.color_box {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.color_circle_common {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.color_circle {
+  composes: color_circle_common;
+}
+.color_active {
+  composes: color_circle_common;
+}
+.color_active:after {
+  content: '';
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+  border: 4px solid #fff;
+}
+
+.shape_border {
+  border-bottom: 1px solid #1890ff;
+}

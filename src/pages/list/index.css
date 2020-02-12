@@ -1,0 +1,9 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background: #c9f5d2;
+  
+}
+.box:hover {
+  background: #f66;
+}
